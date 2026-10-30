@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/pkwagner/thinx/internal/adapters/thingscloud"
-	"github.com/pkwagner/thinx/internal/config"
-	"github.com/pkwagner/thinx/internal/onboarding"
-	"github.com/pkwagner/thinx/internal/tui"
+	"github.com/aglowinthefield/thinx/internal/adapters/thingscloud"
+	"github.com/aglowinthefield/thinx/internal/config"
+	"github.com/aglowinthefield/thinx/internal/onboarding"
+	"github.com/aglowinthefield/thinx/internal/tui"
 )
 
 // errOnboardingAborted signals that the user quit onboarding before finishing,

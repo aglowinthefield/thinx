@@ -6,7 +6,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/pkwagner/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/domain"
 )
 
 // TestScheduleShortcuts verifies Anytime, Someday, and empty-date behavior.

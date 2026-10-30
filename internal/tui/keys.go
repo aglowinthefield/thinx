@@ -3,8 +3,8 @@ package tui
 import (
 	"strings"
 
-	"github.com/pkwagner/thinx/internal/domain"
-	"github.com/pkwagner/thinx/internal/tui/uihelp"
+	"github.com/aglowinthefield/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/tui/uihelp"
 
 	"charm.land/bubbles/v2/key"
 )

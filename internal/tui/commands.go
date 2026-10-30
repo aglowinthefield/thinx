@@ -6,7 +6,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/pkwagner/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/domain"
 )
 
 // mutationDisplay is the minimum time an optimistic status/delete change stays

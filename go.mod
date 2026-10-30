@@ -1,4 +1,4 @@
-module github.com/pkwagner/thinx
+module github.com/aglowinthefield/thinx
 
 go 1.25.0
 

@@ -8,7 +8,7 @@ import (
 
 	things "github.com/pkwagner/things-cloud-sdk"
 	thingssync "github.com/pkwagner/things-cloud-sdk/sync"
-	"github.com/pkwagner/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/domain"
 )
 
 type Store struct {

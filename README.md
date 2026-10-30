@@ -3,12 +3,32 @@ Thinx is a Things 3-compatible todo app for the Terminal, running on Linux, macO
 
 <img src=".github/assets/teaser_edit.png" width="800px" alt="thinx example screenshot"/>
 
-## Getting Started
+## Fork development
+
+This is [aglowinthefield's fork](https://github.com/aglowinthefield/thinx) of
+[pkwagner/thinx](https://github.com/pkwagner/thinx). The upstream roadmap below is
+retained for iteration; no roadmap features have been implemented in this fork yet.
+
+From the local checkout, test and install your current changes with:
+
 ```sh
-go install github.com/pkwagner/thinx/cmd/thinx@latest
+go test ./...
+go vet ./...
+go install ./cmd/thinx
 ```
 
-Alternatively, binaries for Linux, macOS, and Windows are available on the [releases page](https://github.com/pkwagner/thinx/releases). Just double-click under Windows, or install on Linux or macOS with:
+On Windows, the default installation path is `%USERPROFILE%\go\bin\thinx.exe`
+(unless `GOBIN` is set). Run `thinx` from Windows Terminal after installing.
+See [DEVELOPMENT.md](DEVELOPMENT.md) for the iteration workflow and safety notes.
+
+## Getting Started
+```sh
+go install github.com/aglowinthefield/thinx/cmd/thinx@latest
+```
+
+Fork release binaries have not been published yet. Upstream binaries for Linux,
+macOS, and Windows are available on the [upstream releases page](https://github.com/pkwagner/thinx/releases),
+but they do not include this fork's changes. For a downloaded binary on Linux or macOS:
 
 ```sh
 install -Dm755 <path_to_downloaded_binary> ~/.local/bin/thinx

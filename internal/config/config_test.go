@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 	"testing"
 )
 
@@ -27,7 +28,7 @@ func TestLoadMissingReturnsZero(t *testing.T) {
 	}
 }
 
-// TestSaveLoadRoundTrip verifies persistence and that the file is private.
+// TestSaveLoadRoundTrip verifies persistence and, on Unix, private file permissions.
 func TestSaveLoadRoundTrip(t *testing.T) {
 	withTempDir(t)
 	want := Config{Provider: ProviderThingsCloud, Username: "u@example.com", Password: "secret"}
@@ -48,8 +49,12 @@ func TestSaveLoadRoundTrip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("stat: %v", err)
 	}
-	if perm := info.Mode().Perm(); perm != 0o600 {
-		t.Fatalf("file mode = %v, want 0600", perm)
+	// Windows uses ACLs rather than Unix permission bits; os.Stat cannot
+	// validate credential privacy there. Keep checking persistence above.
+	if runtime.GOOS != "windows" {
+		if perm := info.Mode().Perm(); perm != 0o600 {
+			t.Fatalf("file mode = %v, want 0600", perm)
+		}
 	}
 }
 

@@ -2,7 +2,7 @@ package tui
 
 import (
 	tea "charm.land/bubbletea/v2"
-	"github.com/pkwagner/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/domain"
 )
 
 // Run starts the Bubble Tea terminal interface.

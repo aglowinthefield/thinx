@@ -9,9 +9,9 @@ import (
 	"charm.land/bubbles/v2/spinner"
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/pkwagner/thinx/internal/domain"
-	"github.com/pkwagner/thinx/internal/tui/modal"
-	"github.com/pkwagner/thinx/internal/tui/uihelp"
+	"github.com/aglowinthefield/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/tui/modal"
+	"github.com/aglowinthefield/thinx/internal/tui/uihelp"
 )
 
 // autoRefreshInterval is the minimum time between server syncs and the period of

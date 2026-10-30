@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"charm.land/lipgloss/v2"
-	"github.com/pkwagner/thinx/internal/domain"
-	"github.com/pkwagner/thinx/internal/tui/uihelp"
+	"github.com/aglowinthefield/thinx/internal/domain"
+	"github.com/aglowinthefield/thinx/internal/tui/uihelp"
 )
 
 // Overlay renders the modal centered over base.
